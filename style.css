@@ -398,10 +398,10 @@ a { color: inherit; }
   flex-shrink: 0;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 480px) {
   .details-grid { grid-template-columns: 1fr; gap: 1.5rem; }
   .detail-divider {
-    width: 60px;
+    width: 100px;
     height: 1px;
     background: linear-gradient(to right, transparent, var(--hairline) 15%, var(--hairline) 85%, transparent);
     justify-self: center;
