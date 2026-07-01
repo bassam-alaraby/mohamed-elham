@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohamed &amp; Elham — Wedding Invitation</title>
+<meta name="description" content="You're invited to the wedding of Mohamed & Elham — Wednesday, July 22, 9:00 PM, Paris Plaza, Shebin El-Kom.">
+<meta property="og:title" content="Mohamed & Elham — We're Getting Married">
+<meta property="og:description" content="Wednesday, July 22 · 9:00 PM · Paris Plaza, Shebin El-Kom">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,400..500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<main>
+<!-- HERO / ENVELOPE -->
+<section class="hero" id="hero">
+  <canvas id="particlesCanvas" aria-hidden="true"></canvas>
+  <div class="envelope-wrap">
+
+    <div class="envelope" id="envelope">
+
+      <!-- Static envelope body: back rectangle + front pocket fold -->
+      <svg class="env-shape" viewBox="0 0 320 200" preserveAspectRatio="none" aria-hidden="true">
+        <rect class="es-back" x="0" y="0" width="320" height="200"></rect>
+        <polygon class="es-pocket" points="0,200 160,88 320,200"></polygon>
+      </svg>
+
+      <div class="env-letter" id="envLetter">
+        <p class="eyebrow">The Wedding Of</p>
+        <h1 class="names">
+          <span class="name">Mohamed</span>
+          <span class="amp" aria-hidden="true">&amp;</span>
+          <span class="name">Elham</span>
+        </h1>
+        <div class="rule" aria-hidden="true"></div>
+        <p class="tagline">
+          We're getting married —<br>and we'd love for you to be there.
+        </p>
+      </div>
+
+      <button class="env-flap" id="envFlap" type="button" aria-expanded="false" aria-label="Open the invitation">
+        <svg class="env-flap-shape" viewBox="0 0 320 120" preserveAspectRatio="none" aria-hidden="true">
+          <polygon points="0,0 320,0 160,120"></polygon>
+        </svg>
+        <span class="seal" id="sealEl">
+          <svg viewBox="0 0 100 100" class="seal-blob" aria-hidden="true">
+            <path d="M50 6 C68 4 92 16 94 40 C97 60 88 82 66 92 C46 100 18 94 8 74 C-2 54 4 26 24 12 C32 6 42 7 50 6 Z" />
+          </svg>
+          <span class="seal-mono" aria-hidden="true">M&nbsp;&amp;&nbsp;E</span>
+        </span>
+      </button>
+
+    </div>
+
+    <p class="tap-hint" id="tapHint">Tap the seal to open</p>
+  </div>
+</section>
+
+<!-- WHEN / WHERE — perfectly split -->
+<section class="details" id="details" aria-label="Wedding date and venue">
+  <div class="details-grid">
+    <dl class="detail-card reveal" data-reveal>
+      <dt class="detail-label">When</dt>
+      <dd class="detail-main"><time datetime="2026-07-22T21:00">Wednesday, July 22</time></dd>
+      <dd class="detail-sub"><time datetime="2026-07-22T21:00">9:00 PM</time></dd>
+      <dd><button class="detail-btn" id="calendarBtn" type="button">Add to Calendar</button></dd>
+    </dl>
+
+    <div class="detail-divider" aria-hidden="true"></div>
+
+    <dl class="detail-card reveal" data-reveal>
+      <dt class="detail-label">Where</dt>
+      <dd class="detail-main">Paris Plaza</dd>
+      <dd class="detail-sub">Shebin El-Kom, Monufia</dd>
+      <dd><a class="detail-btn" href="https://www.google.com/maps/search/?api=1&query=Paris+Plaza+Shebin+El+Kom" target="_blank" rel="noopener noreferrer">Get Directions</a></dd>
+    </dl>
+  </div>
+</section>
+
+<!-- COUNTDOWN -->
+<section class="countdown" id="countdown">
+  <h2 class="countdown-label reveal" data-reveal>Counting down to</h2>
+  <div class="countdown-grid reveal" data-reveal>
+    <div class="cd-unit"><span class="cd-num" id="cdDays">00</span><span class="cd-word">Days</span></div>
+    <div class="cd-unit"><span class="cd-num" id="cdHours">00</span><span class="cd-word">Hours</span></div>
+    <div class="cd-unit"><span class="cd-num" id="cdMins">00</span><span class="cd-word">Minutes</span></div>
+    <div class="cd-unit"><span class="cd-num" id="cdSecs">00</span><span class="cd-word">Seconds</span></div>
+  </div>
+</section>
+
+<!-- NOTE -->
+<section class="note">
+  <p class="note-text reveal" data-reveal>
+    Thank you for being part of our journey.<br>We can't wait to celebrate this day with you.
+  </p>
+  <p class="note-sign reveal" data-reveal>Mohamed &amp; Elham</p>
+</section>
+</main>
+
+<footer class="footer">
+  <p class="dedication reveal" data-reveal>Made with love for you both — Bassam</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
