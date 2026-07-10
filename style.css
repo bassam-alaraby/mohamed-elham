@@ -325,6 +325,54 @@ a { color: inherit; }
 }
 
 /* ============================================
+   SCROLL CUE
+   ============================================ */
+.scroll-cue {
+  position: absolute;
+  left: 50%;
+  bottom: var(--space-3);
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+.scroll-cue-text {
+  font-size: 0.6rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+.scroll-cue-line {
+  width: 1px;
+  height: 2.2rem;
+  background: linear-gradient(to bottom, var(--gold-light), transparent);
+  position: relative;
+  overflow: hidden;
+}
+.scroll-cue-line::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, var(--gold));
+  animation: scrollCueDrop 1.8s ease-in-out infinite;
+}
+@keyframes scrollCueDrop {
+  0% { top: -100%; }
+  100% { top: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .scroll-cue-line::after { animation: none; display: none; }
+}
+
+/* ============================================
    WHEN / WHERE — symmetric, overflow-safe
    ============================================ */
 .details {
