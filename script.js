@@ -185,6 +185,19 @@
   }
 
   /* ============================================
+     SCROLL CUE
+     ============================================ */
+  var scrollCue = document.getElementById("scrollCue");
+  if (scrollCue) {
+    scrollCue.addEventListener("click", function () {
+      var detailsSection = document.getElementById("details");
+      if (detailsSection) {
+        detailsSection.scrollIntoView({ behavior: prefersReducedMotion ? "auto" : "smooth" });
+      }
+    });
+  }
+
+  /* ============================================
      ADD TO CALENDAR
      ============================================ */
   var calendarBtn = document.getElementById("calendarBtn");
